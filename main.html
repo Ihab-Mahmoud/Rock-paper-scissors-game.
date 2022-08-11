@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,700&family=Ubuntu:ital,wght@0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <title>Rock paper scissors game</title>
+  </head>
+  <body>
+    <header>
+      <div class="game-title">Rock paper scissors game</div>
+    </header>
+
+    <div class="score">
+      <h2>Your score</h2>
+      <div class="score-table">
+        <table>
+          <tr>
+            <th>Round</th>
+            <th>Player 1</th>
+            <th>Player 2</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>No winner</td>
+            <td>No winner</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>No winner</td>
+            <td>No winner</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>No winner</td>
+            <td>No winner</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="game-body">
+      <div class="player2">
+        <div class="player2-content">
+          <img src="./images/hello.png" alt="hello" />
+          <p>hello i am graham , looking forward to challenge you</p>
+        </div>
+      </div>
+      <div class="start">
+        <div class="player1-choise"><i data-type="rock" class="fas fa-hand-back-fist"></i></div>
+        <div class="player2-choise"><i data-type="rock" class="fas fa-hand-back-fist"></i></div>
+        <button>start</button>
+      </div>
+      <div class="player1">
+        <div class="buttons">
+          <button data-type="rock" class="rock"><i data-type="rock" class="fas fa-hand-back-fist"></i></button>
+          <button data-type="scissors" class="scissors"><i data-type="scissors" class="fas fa-hand-scissors"></i></button>
+          <button data-type="paper" class="paper"><i data-type="paper" class="fas fa-hand"></i></button>
+        </div>
+      </div>
+    </div>
+    <script src="./java/main.js"></script>
+  </body>
+</html>

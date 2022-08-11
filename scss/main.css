@@ -1,0 +1,220 @@
+* {
+  box-shadow: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+header {
+  background-color: #ffc107;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 400;
+}
+
+.score {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 300px;
+  padding: 20px 0;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.score h2 {
+  text-align: left;
+  font-size: 1.3rem;
+  padding: 10px 8px;
+  background-color: #f7f7f7;
+  width: 80%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px rgba(0, 0, 0, 0.08);
+}
+.score .score-table {
+  width: 80%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.score .score-table table {
+  display: flex;
+  justify-content: center;
+}
+.score .score-table table tr th {
+  padding: 10px;
+}
+.score .score-table table tr td {
+  padding: 10px;
+}
+.score .score-table table tr:nth-child(2) td {
+  border-top: 1px solid;
+}
+
+.game-body {
+  position: absolute;
+  right: 0;
+  width: 75%;
+  height: 98vh;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.game-body .player2 {
+  margin-top: 50px;
+  position: relative;
+  padding: 15px;
+}
+.game-body .player2 .player2-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.game-body .player2 .player2-content img {
+  width: 300px;
+}
+.game-body .player2 .player2-content p {
+  margin-bottom: 70px;
+  font-size: 1.5rem;
+}
+.game-body .player2::after {
+  content: "player 2";
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  font-size: 1.3rem;
+  padding: 10px;
+}
+.game-body .player2.active::after {
+  border: red solid 2px;
+  border-radius: 5px;
+}
+.game-body .player2.active::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  height: 14px;
+  width: 14px;
+  background-color: red;
+  border-radius: 50%;
+}
+.game-body .player2.active {
+  border: red solid 1px;
+}
+.game-body .start {
+  width: 100%;
+  height: 200px;
+  background-color: #a8cdff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 50px 0;
+  font-size: 1.5rem;
+  position: relative;
+}
+.game-body .start .player1-choise {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+}
+.game-body .start .player2-choise {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  font-size: 2rem;
+}
+.game-body .start button {
+  background-color: #ffc107;
+  color: black;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.game-body .player1 {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 145px;
+}
+.game-body .player1 .buttons {
+  display: flex;
+}
+.game-body .player1 .buttons .rock {
+  background-color: #62a1fe;
+  color: #ffffff;
+  font-size: 1.5rem;
+  width: 120px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+.game-body .player1 .buttons .scissors {
+  background-color: #6ab190;
+  color: #ffffff;
+  font-size: 1.5rem;
+  width: 120px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+.game-body .player1 .buttons .paper {
+  background-color: #e87c87;
+  color: #ffffff;
+  font-size: 1.5rem;
+  width: 120px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+.game-body .player1 .buttons .paper.disabled, .game-body .player1 .buttons .scissors.disabled, .game-body .player1 .buttons .rock.disabled {
+  pointer-events: none;
+  position: relative;
+}
+.game-body .player1 .buttons .paper.disabled .prevent, .game-body .player1 .buttons .scissors.disabled .prevent, .game-body .player1 .buttons .rock.disabled .prevent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 5;
+}
+.game-body .player1::after {
+  content: "player 1";
+  position: absolute;
+  left: 30px;
+  top: 10px;
+  font-size: 1.3rem;
+  padding: 10px;
+}
+.game-body .player1.active::after {
+  border: red solid 2px;
+  border-radius: 5px;
+}
+.game-body .player1.active::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 28px;
+  height: 14px;
+  width: 14px;
+  background-color: red;
+  border-radius: 50%;
+}
+.game-body .player1.active {
+  border: red solid 1px;
+}/*# sourceMappingURL=main.css.map */
